@@ -1,16 +1,6 @@
 import praw
+from accounts import *
 
-Searednumber2 = praw.Reddit(client_id = "",
-                    client_secret = "",
-                    password = "",
-                    user_agent = "Seared",
-                    username = "")
-
-KillAllTrolls = praw.Reddit(client_id = "",
-                    client_secret = "",
-                    password = "",
-                    user_agent = "Seared2",
-                    username = "")
 
 #Upvote_Users says who you want to upvote. Do caps matters?
 upvote_users = ("PSN_GAMER", "CrackerJack7209", "Frensin", "Zrainh20", "Searednumber2")
@@ -26,7 +16,7 @@ def vote_posts(reddit_account):
             print("I downvoted {}, posted by {}".format(submission.title, submission.author))
         elif submission.author in upvote_users:
             submission.upvote()
-            print("I upvoted {}, posted by {}".format(submission.title, submission.author, ))
+            print("I upvoted {}, posted by {}".format(submission.title, submission.author))
 
 vote_posts(Searednumber2)
 vote_posts(KillAllTrolls)
